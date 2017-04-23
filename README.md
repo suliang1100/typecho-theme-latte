@@ -1,11 +1,11 @@
 # typecho-theme-latte
-## Latte
-
-![](https://raw.githubusercontent.com/suliang1100/typecho-theme-latte/master/screenshot.png)
-
 #### Latte Time（拿铁时光）博客使用皮肤
 
 > 一款基于Typecho博客的主题，简洁素雅大方，适合安静书写技术博客。按`标签` `分类` `归档` `搜索` 四个维度来管理文章
+
+[点击查看效果](http://www.suyunsoft.com/blog/)
+
+![](https://raw.githubusercontent.com/suliang1100/typecho-theme-latte/master/screenshot.png)
 
 ### 特点
 
