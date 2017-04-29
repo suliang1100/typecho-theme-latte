@@ -1,7 +1,7 @@
 /*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/  
 ::-webkit-scrollbar  
 {  
-    width: 12px;  
+    width: 8px;  
     height: 12px;  
     background-color: #F5F5F5;  
 }  
@@ -15,6 +15,9 @@
 {   
     background-color: #bbb;  
 }  
+::selection{background:#eee;}
+::-moz-selection{background:#eee;}
+::-webkit-selection{background:#eee;}
 body {
 	background-color:#FFF;
 	color:#444;
@@ -24,6 +27,7 @@ body {
 a {
 	color:#0085a1;
 	text-decoration:none;
+	transition:0.2s;
 }
 a:hover,a:active {
 	color:#444;
@@ -35,7 +39,7 @@ pre,code {
 }
 code {
 	padding:2px 4px;
-	color:#B94A48;
+	color:#0085a1;
 }
 pre {
 	padding:10px;
@@ -62,16 +66,33 @@ input[type="text"],input[type="email"],input[type="url"],input[type="password"],
 	-webkit-box-sizing:border-box;
 	-moz-box-sizing:border-box;
 	box-sizing:border-box;
+	transition:0.2s;
 }
 textarea {
 	resize:vertical;
+	outline:none;
+}
+textarea:focus,input[type="text"]:focus,input[type="email"]:focus{
+	border:1px solid #0085a1;
+}
+#body{
+	margin-top:65px;
+}
+.blog-side-title{
+	font-size:18px;
+	margin:4px 0;
+	font-weight:normal;
+}
+.widget-about{
+	padding-bottom:10px;
 }
 .post-excerpt{
 	color:#a3a3a3;
 }
 .post-excerpt a{
 	display:block;
-	color:#a3a3a3;
+	color:#333;
+	line-height:1.7;
 }
 .post-excerpt a:hover{
 	color:#0085a1;
@@ -90,13 +111,27 @@ textarea {
 	font-weight:bold;
 }
 #header {
+	width:100%;
 	height:64px;
 	border-bottom:1px solid #EEE;
+	position:fixed;
+	left:0;
+	top:0;
+	z-index:9999;
+	background:#f5f5f5;
+}
+.head{
+	height:64px;
+}
+.head div{
+	height:64px;
 }
 #logo {
 	color:#000;
-	font-size:2em;
+	font-size:3.6em;
 	font-family:"Kunstler Script";
+	margin-top:8px;
+	display:block;
 }
 .description {
 	margin:.5em 0 0;
@@ -131,18 +166,27 @@ textarea {
 }
 #search input {
 	padding-right:30px;
+	height:34px;
+	border:1px solid #dedede;
+	transition:0.2s;
+	border-radius:4px;
+}
+#search input:focus{
+	border:1px solid #0085a1;
 }
 #search button {
 	position:absolute;
-	right:4px;
-	top:2px;
+	right:1px;
+	top:1px;
 	border:none;
 	padding:0;
-	width:24px;
-	height:24px;
-	background:transparent url(img/icon-search.png) no-repeat center center;
+	width:34px;
+	height:32px;
+	background:#fff url(img/icon-search.png) no-repeat center center;
 	direction:ltr;
 	text-indent:-9999em;
+	border-top-right-radius:4px;
+	border-bottom-right-radius:4px;
 }
 @media(-webkit-min-device-pixel-ratio:2),(min-resolution:192dpi) {
 	#search button {
@@ -158,7 +202,7 @@ textarea {
 }
 .post-title {
 	margin:.83em 0;
-	font-size:1.6em;
+	font-size:1.4em;
 }
 .post-title-archive .post-title{
 	margin:.83em 0 .2em 0;
@@ -171,7 +215,7 @@ textarea {
 	font-weight:normal;
 }
 .post-title a{
-	color:#0085a1;
+	color:#000;
 	font-family:'Noticia Text',Georgia,'Lantinghei SC','Hiragino Sans GB','Heiti SC','Microsoft YaHei',serif;
 	font-weight:normal;
 }
@@ -320,6 +364,17 @@ textarea {
 	content:" *";
 	color:#C00;
 }
+.submit-btn{
+	width:120px;
+	height:32px;
+	border:none;
+	background:#0085a1;
+	color:#fff;
+	transition:0.2s;
+}
+.submit-btn:hover{
+	background:#00748c;
+}
 #secondary {
 	padding-top:15px;
 	word-wrap:break-word;
@@ -343,6 +398,7 @@ textarea {
 	line-height:1.5;
 	text-align:center;
 	color:#999;
+	background:#f5f5f5;
 }
 #footer a{
 	font-family:"Microsoft Yahei";
@@ -353,7 +409,7 @@ textarea {
 	margin-bottom:100px;
 }
 .post-content,.comment-content {
-	line-height:1.5;
+	line-height:2;
 	word-wrap:break-word;
 }
 .post-content h2,.comment-content h2 {
@@ -436,7 +492,7 @@ img.alignright {
 	border:1px solid #ddd;
 	padding:4px 10px;
 	border-radius:14px;
-	margin:5px 4px;
+	margin:5px 4px 5px 0;
 	color:#888;
 }
 .tag-list a:hover{
@@ -452,11 +508,11 @@ img.alignright {
 	font-family:"Microsoft Yahei";
 }
 .widget-about h3{
-	width:100px;
+	width:120px;
 	margin:10px 0;
 }
 .widget-about h3 img{
-	width:94px;
+	width:114px;
 	padding:2px;
 	border:1px solid #eee;
 }
@@ -486,5 +542,5 @@ img.alignright {
 	font-size:26px;
 }
 .post-archive-content pre{
-	font-size:14px;
+	font-size:15px;
 }

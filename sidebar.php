@@ -3,6 +3,8 @@
 
     <section class="widget-about">
         <h3><img src="<?php $this->options->themeUrl(); ?>img/logo.jpg" /></h3>
+        <h4 class="blog-side-title">— 拿铁时光 —</h4>
+        <p class="description"><?php $this->options->description() ?></p>
     </section>
 
     <?php Typecho_Plugin::factory('usr/themes/sidebar.php')->tagCloud(); ?>

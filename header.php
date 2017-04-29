@@ -1,6 +1,6 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 <!DOCTYPE HTML>
-<html class="no-js">
+<html>
 <head>
     <meta charset="<?php $this->options->charset(); ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
@@ -18,7 +18,11 @@
     <link rel="stylesheet" href="<?php $this->options->themeUrl('grid.css'); ?>">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('style.css'); ?>">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('prism.css'); ?>">
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('animate.min.css'); ?>">
+    <script src="http://libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
 <script type="text/javascript" src="<?php $this->options->themeUrl('prism.js'); ?>"></script>
+<script type="text/javascript" src="<?php $this->options->themeUrl('Headroom.js'); ?>"></script>
+<script type="text/javascript" src="<?php $this->options->themeUrl('jQuery.headroom.js'); ?>"></script>
 
 
     <!--[if lt IE 9]>
@@ -34,8 +38,8 @@
     <div class="browsehappy" role="dialog"><?php _e('当前网页 <strong>不支持</strong> 你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/">升级你的浏览器</a>'); ?>.</div>
 <![endif]-->
 
-<header id="header" class="clearfix">
-    <div class="container">
+<header id="header" class="header headroom">
+    <div class="container head">
         <div class="row">
             <div class="site-name col-8">
                 <a id="logo" href="<?php $this->options->siteUrl(); ?>">
@@ -44,10 +48,9 @@
                     <?php endif; ?>
                     <?php $this->options->title() ?>
                 </a>
-        	    <p class="description"><?php $this->options->description() ?></p>
             </div>
             <div class="site-search col-3 kit-hidden-tb">
-                <form id="search" method="post" action="./" role="search">
+                <form id="search" method="post" class="search-wrap" action="./" role="search">
                     <label for="s" class="sr-only"><?php _e('搜索关键字'); ?></label>
                     <input type="text" name="s" class="text" placeholder="<?php _e('输入关键字搜索'); ?>" />
                     <button type="submit" class="submit"><?php _e('搜索'); ?></button>

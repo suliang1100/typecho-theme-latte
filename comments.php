@@ -29,17 +29,13 @@
                 <label for="mail"<?php if ($this->options->commentsRequireMail): ?> class="required"<?php endif; ?>><?php _e('Email'); ?></label>
     			<input type="email" name="mail" id="mail" class="text" value="<?php $this->remember('mail'); ?>"<?php if ($this->options->commentsRequireMail): ?> required<?php endif; ?> />
     		</p>
-    		<p>
-                <label for="url"<?php if ($this->options->commentsRequireURL): ?> class="required"<?php endif; ?>><?php _e('网站'); ?></label>
-    			<input type="url" name="url" id="url" class="text" placeholder="<?php _e('http://'); ?>" value="<?php $this->remember('url'); ?>"<?php if ($this->options->commentsRequireURL): ?> required<?php endif; ?> />
-    		</p>
             <?php endif; ?>
     		<p>
                 <label for="textarea" class="required"><?php _e('内容'); ?></label>
                 <textarea rows="8" cols="50" name="text" id="textarea" class="textarea" required ><?php $this->remember('text'); ?></textarea>
             </p>
     		<p>
-                <button type="submit" class="submit"><?php _e('提交评论'); ?></button>
+                <button type="submit" class="submit submit-btn"><?php _e('提交评论'); ?></button>
             </p>
     	</form>
     </div>
