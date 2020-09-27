@@ -5,7 +5,7 @@
 
 [点击查看效果](http://www.suyunsoft.com/blog/)
 
-![](https://raw.githubusercontent.com/suliang1100/typecho-theme-latte/master/screenshot.png)
+![拿铁时光](http://www.suyunsoft.com/blog/)
 
 ### 特点
 
