@@ -3,9 +3,9 @@
 
 > 一款基于Typecho博客的主题，简洁素雅大方，适合安静书写技术博客。按`标签` `分类` `归档` `搜索` 四个维度来管理文章
 
-[点击查看效果](http://www.suyunsoft.com/blog/)
+[点击查看效果](http://huangyingying.com/blog/)
 
-![拿铁时光](http://www.suyunsoft.com/blog/)
+![拿铁时光](http://huangyingying.com/blog/)
 
 ### 特点
 
